@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "229252200100",
+    "firebase_url": "https://notetaking-a7237.firebaseio.com",
+    "project_id": "notetaking-a7237",
+    "storage_bucket": "notetaking-a7237.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229252200100:android:983ccf4686fc6f3c",
+        "android_client_info": {
+          "package_name": "com.example.sunnypariharflash.notetaking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229252200100-4oek1g07r3on5hkng5mf3agl995jfljg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sunnypariharflash.notetaking",
+            "certificate_hash": "657d47109c629d988a5f5eda0e91a2e63f350acc"
+          }
+        },
+        {
+          "client_id": "229252200100-3bf2d1cjt8l7rj3kifidadae33o9k5bu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwYQMTeiDKu3uaf4XPyLwoZjUR86ZwRHM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229252200100-3bf2d1cjt8l7rj3kifidadae33o9k5bu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

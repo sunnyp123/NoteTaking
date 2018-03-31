@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="300"
+        android:title="Date Created"
+        app:showAsAction="never"/>
+    <item
+        android:title="Settings."/>
+    <item
+        android:title="Add Remainder"/>
+    <item
+        android:id="@+id/action_cross"
+        android:orderInCategory="200"
+        android:title="Close"
+        android:icon="@drawable/ic_close_black_24dp"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_userd"
+        android:orderInCategory="300"
+        android:title="Done"
+        android:icon="@drawable/ic_done_black_24dp"
+        app:showAsAction="ifRoom" />
+</menu>

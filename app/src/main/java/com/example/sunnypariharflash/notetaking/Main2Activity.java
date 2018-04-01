@@ -83,7 +83,9 @@ FirebaseUser user;
 
             }
         });
-
+        android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.navigationdrawer,new NoNotesHere());
+        ft.commit();
         reference = FirebaseDatabase.getInstance().getReference().child("UserInfo").child(user.getUid());
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -211,8 +213,21 @@ FirebaseUser user;
 
 if(item.getItemId()==R.id.note_id_drawer){
     android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-    ft.add(R.id.navigationdrawer,new NotesFrag());
+    ft.replace(R.id.navigationdrawer,new NotesFrag());
     ft.commit();
+}
+else if(item.getItemId()==R.id.starred_id_drawer){
+    android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+    ft.replace(R.id.navigationdrawer,new StarredFrag());
+    ft.commit();
+}
+else if(item.getItemId()==R.id.Remainders_id_drawer){
+    android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+    ft.replace(R.id.navigationdrawer,new RemainderFrag());
+    ft.commit();
+}
+else if(item.getItemId()==R.id.settings_id_drawer){
+startActivity(new Intent(Main2Activity.this,Main4Activity.class));
 }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -3,6 +3,7 @@ package com.example.sunnypariharflash.notetaking;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -47,6 +48,7 @@ private Toolbar toolbar;
         editText2 = findViewById(R.id.notedatatext);
     auth = FirebaseAuth.getInstance();
 bar = findViewById(R.id.starhaibhai);
+
            }
 
 

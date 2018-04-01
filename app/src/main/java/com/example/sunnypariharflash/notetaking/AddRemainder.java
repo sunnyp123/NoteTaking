@@ -1,6 +1,7 @@
 package com.example.sunnypariharflash.notetaking;
 
 import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
@@ -8,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -20,6 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class AddRemainder extends AppCompatActivity {
@@ -52,6 +56,7 @@ private List<Remainders> getRemaindersInfo(String subject,String date,String tim
         remainders.add(re);
 return remainders;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 if(item.getItemId()==R.id.action_userd){

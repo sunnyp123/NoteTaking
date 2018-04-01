@@ -12,12 +12,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
+            android:textSize="25sp"
             android:id="@+id/titlelistsetup"
             android:textColor="@android:color/black"
             />
         <TextView
             android:layout_width="wrap_content"
             android:id="@+id/noteslistsetup"
+            android:textSize="15sp"
             android:textColor="@color/colorPrimaryDark"
             android:layout_height="wrap_content"
             />
@@ -25,6 +27,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:id="@+id/datelistsetup"
+            android:textSize="15sp"
             android:textColor="@color/colorPrimaryDark"
             android:layout_height="wrap_content"
             />
@@ -32,18 +35,24 @@
         <TextView
             android:layout_width="wrap_content"
             android:id="@+id/timelistsetup"
+            android:textSize="15sp"
             android:textColor="@color/colorPrimaryDark"
             android:layout_height="wrap_content"
             />
 
     </LinearLayout>
- <LinearLayout
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content">
-     <RatingBar
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:id="@+id/ratinglistsetup"
-         android:numStars="1"/>
- </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="67dp">
+
+        <RatingBar
+            android:id="@+id/ratinglistsetup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="1"
+            android:layout_gravity="bottom"
+            android:scaleX="0.5"
+            android:scaleY="0.5" />
+    </LinearLayout>
 </LinearLayout>

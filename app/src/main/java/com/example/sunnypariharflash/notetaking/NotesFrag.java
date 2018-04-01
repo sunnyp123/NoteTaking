@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.firebase.auth.FirebaseAuth;
@@ -20,6 +21,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 
 /**
@@ -35,6 +38,7 @@ DatabaseReference reference;
 private ListView listView;
 FirebaseAuth auth;
 FirebaseUser user;
+List<NoteData> notesd = new ArrayList<>();
 DatabaseReference databaseReference;
     private ArrayList<String> mMeetings = new ArrayList<>();
     @Override
@@ -45,47 +49,33 @@ DatabaseReference databaseReference;
     listView = vv.findViewById(R.id.listststs);
     auth = FirebaseAuth.getInstance();
     user = auth.getCurrentUser();
-        final String[] d = new String[1];
+
         reference = FirebaseDatabase.getInstance().getReference().child("UserInfo").child(user.getUid()).child("notes");
-    reference.addListenerForSingleValueEvent(new ValueEventListener() {
+    FirebaseListAdapter<NoteData> listAdapter = new FirebaseListAdapter<NoteData>(getActivity(),NoteData.class,R.layout.listsetup,reference) {
         @Override
-        public void onDataChange(DataSnapshot dataSnapshot) {
-            d[0] = dataSnapshot.getValue().toString();
-        }
-
-        @Override
-        public void onCancelled(DatabaseError databaseError) {
-
-        }
-    });
-    databaseReference = reference.child(d[0]);
-        FirebaseListAdapter<NoteData> adapter = new FirebaseListAdapter<NoteData>(getActivity(),NoteData.class,R.layout.listsetup,databaseReference) {
-            @Override
-            protected void populateView(View v, NoteData model, int position) {
-                TextView textView,textView1,textView2,textView3;
-                RatingBar ratingBar;
-                textView =  v.findViewById(R.id.titlelistsetup);
-                textView1 = v.findViewById(R.id.noteslistsetup);
-                textView2 = v.findViewById(R.id.datelistsetup);
-                textView3 = v.findViewById(R.id.timelistsetup);
-                ratingBar = v.findViewById(R.id.ratinglistsetup);
-                textView.setText(model.getTitle());
-                textView1.setText(model.getNote());
-                textView2.setText(model.getDate());
-                textView3.setText(model.getTime());
-                String datas = model.getStar();
-               int rate = 0;
-                if(datas=="true"){
-                    rate = 1;
-                }
-                else {
-                    rate = 0;
-                }
-                ratingBar.setNumStars(rate);
+        protected void populateView(View v, NoteData model, int position) {
+            TextView t1, t2, t3, t4;
+            RatingBar trate;
+            t1 = v.findViewById(R.id.titlelistsetup);
+            t2 = v.findViewById(R.id.noteslistsetup);
+            t3 = v.findViewById(R.id.datelistsetup);
+            t4 = v.findViewById(R.id.timelistsetup);
+            trate = v.findViewById(R.id.ratinglistsetup);
+            t1.setText(model.Title);
+            t2.setText(model.Note);
+            t3.setText(model.Date);
+            t4.setText(model.Time);
+            if (model.Star.equals("true")) {
+                trate.setNumStars(1);
             }
-        };
-        listView.setAdapter(adapter);
+            else{
+                trate.setNumStars(0);
+            }
+        }
+    };
+    listView.setAdapter(listAdapter);
         return vv;
     }
 
 }
+

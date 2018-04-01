@@ -93,7 +93,7 @@ tasks.execute();
             String time  = h + ":" + min + ":"+ sec;
             String date = c.get(Calendar.YEAR)+ "-"+c.get(Calendar.MONTH)+"-"+c.get(Calendar.DAY_OF_MONTH);
             String starkadata = "false";
-            if(bar.getNumStars()==0){
+            if(bar.getNumStars()==0||bar.getNumStars()==0.5){
              starkadata = "false";   
             }
             else if (bar.getNumStars()==1){

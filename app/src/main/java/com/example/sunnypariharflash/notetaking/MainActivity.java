@@ -50,9 +50,9 @@ ProgressDialog dialog;
         super.onCreate(savedInstanceState);
     SharedPreferences sp = getSharedPreferences("account",MODE_PRIVATE);
 String shareds = sp.getString("uid",null);
-if(!shareds.equals("")){
-    startActivity(new Intent(MainActivity.this,Main2Activity.class));
-}
+    if(!shareds.equals("")){
+        startActivity(new Intent(MainActivity.this,Main2Activity.class));
+    }
     setContentView(R.layout.activity_main);
     GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestEmail()

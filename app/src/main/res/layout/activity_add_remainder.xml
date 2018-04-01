@@ -13,6 +13,7 @@
     android:textColor="@android:color/black"
     android:textStyle="bold"
     android:textSize="20sp"
+    android:id="@+id/subjectatremainder"
     android:layout_margin="10sp"/>
     <LinearLayout
     android:layout_width="match_parent"
@@ -23,7 +24,8 @@
             android:layout_weight="10"
             android:layout_height="wrap_content"
             android:hint="Date:"
-            android:id="@+id/subjectatremainder"
+            android:clickable="true"
+          android:id="@+id/datesssss"
             android:textColor="@android:color/black"
             android:layout_margin="10sp"/>
 <TextView
@@ -31,7 +33,6 @@
     android:layout_height="wrap_content"
     android:text="at"
     android:textStyle="bold"
-    android:id="@+id/dateatremainder"
     android:textColor="@color/colorPrimaryDark"
     android:textSize="15sp"
     android:gravity="end"
@@ -41,6 +42,7 @@
             android:layout_weight="10"
             android:layout_height="wrap_content"
             android:hint="Time:"
+            android:clickable="true"
             android:id="@+id/timeatremainder"
             android:textColor="@android:color/black"
             android:layout_margin="10sp"/>

@@ -227,7 +227,7 @@ else if(item.getItemId()==R.id.Remainders_id_drawer){
     ft.commit();
 }
 else if(item.getItemId()==R.id.settings_id_drawer){
-startActivity(new Intent(Main2Activity.this,Main4Activity.class));
+startActivity(new Intent(Main2Activity.this,SettingsActivity.class));
 }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

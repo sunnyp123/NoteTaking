@@ -29,8 +29,9 @@
         android:layout_gravity="bottom|end"
         android:layout_marginRight="20sp"
         android:visibility="invisible"
-        app:backgroundTint="@color/colorFAB2"
+        app:backgroundTint="#FFFFCC"
         app:elevation="6dp"
+        android:src="@drawable/ic_alarm_black_24dpred"
         app:pressedTranslationZ="12dp"
         />
     <android.support.design.widget.FloatingActionButton
@@ -42,7 +43,8 @@
         android:layout_marginRight="20sp"
         android:visibility="invisible"
         app:elevation="6dp"
-        app:backgroundTint="@color/colorFAB1"
+        android:src="@drawable/ic_note_black_24dpred"
+        app:backgroundTint="#FFFFCC"
         app:pressedTranslationZ="12dp" />
 
     <android.support.design.widget.FloatingActionButton

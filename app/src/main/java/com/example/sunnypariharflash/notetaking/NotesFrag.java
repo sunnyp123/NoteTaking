@@ -62,14 +62,19 @@ DatabaseReference databaseReference;
             t4 = v.findViewById(R.id.timelistsetup);
             trate = v.findViewById(R.id.ratinglistsetup);
             t1.setText(model.Title);
-            t2.setText(model.Note);
+            String datatat = model.Note;
+          int length = 10;
+          if(length>datatat.length()){
+              length = datatat.length();
+          }
+            t2.setText(datatat.substring(0,length));
             t3.setText(model.Date);
             t4.setText(model.Time);
             if (model.Star.equals("true")) {
-                trate.setNumStars(1);
+                trate.setRating(1);
             }
             else{
-                trate.setNumStars(0);
+                trate.setRating(0);
             }
         }
     };

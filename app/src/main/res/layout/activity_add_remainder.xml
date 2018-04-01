@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".AddRemainder">
+<android.support.design.widget.TextInputEditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Add Subject here."
+    android:textColor="@android:color/black"
+    android:textStyle="bold"
+    android:textSize="20sp"
+    android:layout_margin="10sp"/>
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="wrap_content"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:hint="Date:"
+            android:id="@+id/subjectatremainder"
+            android:textColor="@android:color/black"
+            android:layout_margin="10sp"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="at"
+    android:textStyle="bold"
+    android:id="@+id/dateatremainder"
+    android:textColor="@color/colorPrimaryDark"
+    android:textSize="15sp"
+    android:gravity="end"
+    />
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="wrap_content"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:hint="Time:"
+            android:id="@+id/timeatremainder"
+            android:textColor="@android:color/black"
+            android:layout_margin="10sp"/>
+    </LinearLayout>
+</LinearLayout>

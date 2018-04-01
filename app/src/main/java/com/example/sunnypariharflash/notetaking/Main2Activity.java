@@ -80,7 +80,7 @@ FirebaseUser user;
             @Override
             public void onClick(View view) {
                 Toast.makeText(Main2Activity.this, "Second Button", Toast.LENGTH_SHORT).show();
-
+startActivity(new Intent(Main2Activity.this,AddRemainder.class));
             }
         });
         android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
